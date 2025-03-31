@@ -134,7 +134,7 @@ Solution Description:
     1. First I find which word is shorter than the other and use that for the main interation loop
     2. I then iterate over the shorter word and append each letter from both words one at a time
     3. Next I append the rest of the large word (If there is one) and return that as the asnwer
-    (Joingin lists as needed)
+    (Joining lists as needed)
 
 Notes:
 
