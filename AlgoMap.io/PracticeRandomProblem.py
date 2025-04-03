@@ -1,5 +1,6 @@
 import webbrowser
 from pathlib import Path
+import random
 
 """
 This Python Script contains a database of links for all completed LeetCode Questions so far on 
@@ -14,10 +15,11 @@ LinkDict = {}
 
 # Iterate through all Files in the current directory:
 base_dir = Path(__file__).parent
+current_file = Path(__file__).resolve()
 
 # Recursively go through all files under that directory
 for file in base_dir.rglob('*.py'):
-    if file.is_file():
+    if file.is_file() and file.resolve() != current_file:
         try:
             with file.open('r', encoding='utf-8') as f:
                 lines = f.readlines()
@@ -27,11 +29,17 @@ for file in base_dir.rglob('*.py'):
             print(f"{file.name} → Error reading file: {e}")
 
 
-print(LinkDict)
+
+while True:
+    user_input = input("Press 'Enter' for Random Problem, or 'q' to quit: ")
+    if user_input.lower() == 'q':
+        print("Quitting!")
+        exit()
+    else:
+        key = random.choice(list(LinkDict.keys()))
+        url = LinkDict[key]
+        print("Solving Problem: ", key)
+        webbrowser.open(url)
 
 
 
-
-
-# url = "https://leetcode.com/problems/roman-to-integer/"
-# webbrowser.open(url)
