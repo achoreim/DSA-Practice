@@ -3,7 +3,7 @@ Medium
 56. Merge Intervals
 https://leetcode.com/problems/merge-intervals/description/
 
-Time to solve: 
+Time to solve: 59:30 (This was the total time it took to attempt, reserach, and re-attempt)
 """
 
 """
@@ -121,6 +121,41 @@ class Solution:
 
 
 """
-My Own Answer After Watching Greg's Videp:
+My Own Answer After Watching Greg's Video:
 
+O(n log(n)) => Because of the sorting
+"""
+
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+
+        intervals.sort(key=lambda x: x[0])
+        
+        output = []
+        output.append(intervals[0])
+
+        for interval in intervals[1:]:
+            if output[-1][1] >= interval[0]:
+                output[-1][1] = max(output[-1][1], interval[1])
+            else:
+                output.append(interval)
+        
+        return output
+    
+
+"""
+Notes:
+
+    Mistakes I Made:
+        - I recognized the pattern to solve it optimally, however I was unable to code
+        the solution without help. My solution above was very faulty, and involved many
+        tangents in order to satisfy edge cases.
+
+    What I learned:
+        - Don't Assume that the input is sorted, unless specified.
+        - You can use the last input of the output in order to keep track of variables
+
+    What to Practice:
+        - Lambda Functions to sort an array of arrays
+        - Interval problems
 """
