@@ -93,6 +93,4 @@ class Solution:
         for j in range(0, len(nums)):
             output[j] = left_list[j] * right_list[j]
 
-
         return output
-        
