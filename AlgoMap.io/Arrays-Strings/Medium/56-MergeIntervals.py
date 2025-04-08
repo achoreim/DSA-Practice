@@ -123,7 +123,8 @@ class Solution:
 """
 My Own Answer After Watching Greg's Video:
 
-O(n log(n)) => Because of the sorting
+Time complexity: O(n log(n)) => Because of the sorting
+Space Complexity: O(n) => Builing new array
 """
 
 class Solution:
