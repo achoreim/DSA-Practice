@@ -94,3 +94,14 @@ class Solution:
             output[j] = left_list[j] * right_list[j]
 
         return output
+    
+
+"""
+Notes:
+
+    How Can I Improve:
+        - I was able to find the brute force solution to this problem, however, when it came to the
+        optimal solution, I was not able to figure it out without help from Greg's video. This shows
+        that I need more practice with these types of problems in order to figure out the patterns.
+
+"""
