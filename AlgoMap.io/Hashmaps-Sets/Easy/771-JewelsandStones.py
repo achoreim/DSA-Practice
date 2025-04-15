@@ -3,7 +3,8 @@ Easy
 771. Jewels and Stones
 https://leetcode.com/problems/jewels-and-stones/description/
 
-Time to solve: 4:57
+Time to solve problem: 4:57
+Time to make file: 36:00
 """
 
 
