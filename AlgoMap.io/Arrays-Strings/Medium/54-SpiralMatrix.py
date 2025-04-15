@@ -35,6 +35,9 @@ n == matrix[i].length
 
 """
 My First Solution:
+
+A clever solution using multipl try-except statements inside a while loop. 
+This solution was not accepted as it exceeded the time limit.
 """
 
 class Solution:
@@ -94,6 +97,9 @@ class Solution:
                                 coords = up
                         except:
                             break
-
         return output
-    
+
+
+"""
+
+"""
