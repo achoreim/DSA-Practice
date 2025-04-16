@@ -48,7 +48,7 @@ Constraints:
 
 """
 My First Solution:
-Inefficnet, has a time complexity of: O(nlog(n)) due to the .sort() timesort method.
+Inefficient, has a time complexity of: O(nlog(n)) due to the .sort() timesort method.
 """
 
 class Solution:
@@ -65,6 +65,23 @@ class Solution:
                     return True
 
         return False
+    
+"""
+My second solution: Using sets as a data structure
+"""
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        s = set(nums)
+
+        if len(nums) > len(s):
+            return True
+
+        return False
+    
+
+
 
 """
 Notes:
