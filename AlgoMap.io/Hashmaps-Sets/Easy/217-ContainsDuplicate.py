@@ -3,7 +3,8 @@ Easy
 217. Contains Duplicate
 https://leetcode.com/problems/contains-duplicate/description/
 
-Time to solve: 5:42
+Time to initially solve: 5:42
+Time to compile all solutions and notes: 29:54
 """
 
 """
@@ -67,7 +68,11 @@ class Solution:
         return False
     
 """
-My second solution: Using sets as a data structure
+My second solution: Using sets as a data structure.
+
+After getting the hint to use hash sets, the time it took to get this solution took 0:41 seconds.
+
+Time Efficiency: 0()
 """
 
 class Solution:
@@ -80,14 +85,37 @@ class Solution:
 
         return False
     
+"""
+Greg Hog's Solution:
+This solution does some things similar to my second, such as creating a set. However it also includes
+another loop that goes through the set while my solutin just compared the size of the lists.
+"""
 
+class Solution:
+    def numJewelsInStones (self, jewels: str, stones: str) -> int:
+        # O(n + m)
+        s = set(jewels)
+        count = 0
+        for stone in stones:
+            if stone in s:
+                count += 1
+        return count
 
+# Time Complexity: O(n + m)
+# Space Complexity: O(n)
 
 """
 Notes:
 
+    * What I learned:
+        - The time complexity of calling the 'set()' constructor is O(n). (Yes it is a class, and we call the constructor)
+
     * What I can work on:
         - Read the error message: I spent a few minutes trying to get the sorted method to work, unbeknownst to me
         it was working, and I was running into a different compiler error seperate tot he sorted method.
+
+        - Before starting to solve a problem, try to understand the different types of methods that I can use to solve
+        it. In my first soltion, I tried to sort the list, but in my second solution, I used a hash set. The second
+        solution was more optimal, and it would have been better to use that instead of waste my time with sorting.
     
 """
