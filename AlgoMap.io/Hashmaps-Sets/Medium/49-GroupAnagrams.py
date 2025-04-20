@@ -81,5 +81,32 @@ class Solution:
                 output.append([x])
 
         return output
+    
                 
-        
+"""
+My Second Solution: Attempting to remove a Counter() call in the nested for loop.
+Still time limit exceeded:
+"""
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        output = []
+        output.append([strs[0]])
+
+        # Adding an array that keeps tracks of counter dicts to not recall them inside loop
+        output_counts = []
+        output_counts.append([Counter(strs[0])])
+
+        for x in strs[1:]:
+            x_set = Counter(x)
+            for i, y in enumerate(output):
+                y_set = output_counts[i][0]
+                if x_set == y_set:
+                    output[i].append(x)
+                    break
+            if(x_set != y_set):
+                output.append([x])
+                output_counts.append([x_set])
+
+        return output
+
