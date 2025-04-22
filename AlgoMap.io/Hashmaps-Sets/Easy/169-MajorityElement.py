@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/majority-element/description/
 
 Time for first solution O(n): 3:08 
-Time to compile all solutions and notes:
+Time to compile all solutions and notes: 22:51
 """
 
 """
