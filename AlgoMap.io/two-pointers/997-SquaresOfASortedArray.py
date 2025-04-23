@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/squares-of-a-sorted-array/description/
 
 Time for first solution: 3:33
-Time to compile all solutions and notes: 
+Time to compile all solutions and notes: 37:11
 """
 
 """
