@@ -4,7 +4,7 @@ Medium
 https://leetcode.com/problems/longest-consecutive-sequence/description/
 
 Time for first solution O(n): 14:51
-Time to compile all solutions and notes:
+Time to compile all solutions and notes: 37:34
 """
 
 """
