@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/reverse-string/description/
 
 Time for first solution: 2:02
-Time to compile all solutions and notes:
+Time to compile all solutions and notes: 12:34
 """
 
 """
