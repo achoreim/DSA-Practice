@@ -128,6 +128,34 @@ class Solution:
         # Return the joined list, this is O(n) operation on its own
         return ''.join(outputList)
 
+
+"""
+Third Solution: Using a while loop and index variable
+
+Changes -> no need to keep track of lenghts since we are keeping track of an index variable
+        -> using a while loop instead of a for loop
+
+Although the time and space complexity does not change, this problem has been furhter
+optomized in view of the code structure and neatness.
+"""
+
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        merged = []
+        index = 0
+
+        while((index < len(word1)) and (index < len(word2))):
+            merged.append(word1[index])
+            merged.append(word2[index])
+            index += 1
+        
+        if len(word1) > index:
+            merged.append(word1[index:])
+        elif len(word2) > index:
+            merged.append(word2[index:])
+
+        return ''.join(merged)
+
 """
 
 Solution Description:
