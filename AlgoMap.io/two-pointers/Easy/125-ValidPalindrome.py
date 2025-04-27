@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/valid-palindrome/description/
 
 Time for first solution: 14:01
-Time to compile all solutions and notes:
+Time to compile all solutions and notes: 24:59
 """
 
 """
