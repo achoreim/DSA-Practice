@@ -74,5 +74,40 @@ class Solution:
         
         return output
 
+"""
+Second Solution: Attempting to use a hashset:
+
+After many failed attempts, I decided to revert to Greg Hogg's solutions,
+and the following is from there:
+"""
+
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        h = {}
+        n = len(nums)
+        s = set()
+
+        for i, num in enumerate(nums):
+            h[num] = i
+
+        for i in range(n):
+            for j in range(i + 1, n):
+                desired = -nums[i] - nums[j]
+                if desired in h and h[desired] != i and h[desired] != j:
+                    s.add(tuple(sorted([nums[i], nums[j], desired])))
+
+        return list(s)
+    
+"""
+Notes:
+
+    * What I learned:
+        - Match-switch in python is only after 3.10, other than that, it is better to use elifs
+        - Sorting can be a powerfil tool, when you are doing two pointer solutions.
+
+    * What I can work on:
+        - Two Pointer solutions:
+"""
+
 
         
