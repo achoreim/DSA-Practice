@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/valid-parentheses/description/
 
 Time for first solution: 20:20
-Time to compile all solutions and notes:
+Time to compile all solutions and notes: 38:15
 """
 
 """
@@ -96,19 +96,20 @@ The same time and space complexity as my solution, but this implemenation
 uses only one stack, and is more readable:
 """
 
-def isValid(s: str) -> bool:
-    stack = []
-    mapping = {')': '(', ']': '[', '}': '{'}
+class Solution:
+    def isValid(s: str) -> bool:
+        stack = []
+        mapping = {')': '(', ']': '[', '}': '{'}
 
-    for char in s:
-        if char in mapping:
-            if not stack or stack[-1] != mapping[char]:
-                return False
-            stack.pop()
-        else:
-            stack.append(char)
-    
-    return not stack
+        for char in s:
+            if char in mapping:
+                if not stack or stack[-1] != mapping[char]:
+                    return False
+                stack.pop()
+            else:
+                stack.append(char)
+        
+        return not stack
         
 
 """
