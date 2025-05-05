@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/reverse-linked-list/description/
 
 Time for first solution: 6:06
-Time to compile all solutions and notes: 
+Time to compile all solutions and notes: 18:26
 """
 
 """
