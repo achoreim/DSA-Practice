@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/merge-two-sorted-lists/description/
 
 Time for first solution: 8:24 (With help from the solution)
-Time to compile all solutions and notes: 
+Time to compile all solutions and notes: 19:24.63
 """
 
 """
