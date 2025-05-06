@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/linked-list-cycle/description/
 
 Time for first solution: DNF
-Time to compile all solutions and notes:
+Time to compile all solutions and notes: 25:01
 """
 
 """
@@ -96,10 +96,10 @@ class Solution:
 Notes:
 
     *What I have learned:
-        - Floyd’s Cycle Detection Algorithm (also called the “tortoise and hare” algorithm)
+        - Floyd's Cycle Detection Algorithm (also called the “tortoise and hare” algorithm)
 
     *What I can Work on:
-        - Learning more nifty and useful algorithms such as the Floyd’s Cycle Detection
+        - Learning more nifty and useful algorithms such as the Floyd's Cycle Detection
         Algorithm (also called the “tortoise and hare” algorithm)
 
     
