@@ -49,30 +49,36 @@ Space Complexity: O(1)
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         # two pointers:
-        #
+        # Cur goes ahead like normal, and behind is n nodes behind
+        # Return 
 
+
+        # Edge Case for no List
         if not head:
             return head
         
+        # Edge Case for list of one element and n == 1
         if n == 1 and not head.next:
             return head.next
         
-        print("Made it")
+        # Set node pointers
         cur = behind = head
         count = 0
 
         while cur:
             cur = cur.next
-            print(count, n)
             if count > n:
                 behind = behind.next
             count += 1
 
+        # Edge Case if n is equal to size of LList
         if count == n:
             return head.next
         
+        # Skip the n'th from the end element
         if behind and behind.next:
             behind.next = behind.next.next
+
 
         return head
 
@@ -104,7 +110,14 @@ class Solution:
 Notes:
 
     * What I Learned:
+        - It is pythonic convention to use underscore (_) instead of a common variable letter
+          to specify a 'throw away' variable that you do not wish to be used in the future.
+          This was done in the optimal solution.
 
     * What I can work on:
+        - Learn the dummt node technique and its usecases, and implement it when applicable. 
+        - For this problem, our solution, althtough correct, had many different if statements to 
+          counteract the different edge cases. It would be a lot cleaner and more profssional to 
+          implement said edge cases in your algorithm.
 """
 
