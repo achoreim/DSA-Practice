@@ -4,7 +4,7 @@ Easy
 https://leetcode.com/problems/middle-of-the-linked-list/description/
 
 Time for first solution: 4:09
-Time to compile all solutions and notes: 
+Time to compile all solutions and notes: 12:23
 """
 
 """
@@ -57,6 +57,16 @@ Notes:
 
     *What I have Learned:
         - The fast vs slow pointer can also be useful on no cycle related questions as well
+        - When it comes to the while loop, since the fast pointer is skipping by two nodes at once, 
+          make sure to always includ it in the check as: 
+                '''
+                    while fast and fast.next:
+                '''
+          because if you do this:
+                '''
+                    while slow and fast.next:
+                '''
+          you will run ito a Nonetype exception
 
     *What I can work on:
         - Make sure that I read the input output examples correctly before starting to solve a problem
