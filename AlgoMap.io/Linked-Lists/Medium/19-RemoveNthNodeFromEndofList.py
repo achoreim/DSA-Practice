@@ -75,6 +75,36 @@ class Solution:
             behind.next = behind.next.next
 
         return head
-    
 
+"""
+Optimal Solution: The same time and space complexity as my solution, but uses
+                  dummy node and makes the code a lot more readable.
+Time Complexity: O(n)
+Space Complexity: O(1)
+"""
+
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        dummy = ListNode()
+        dummy.next = head
+        behind = ahead = dummy
+
+        for _ in range(n + 1):
+            ahead = ahead.next
+
+        while ahead:
+            behind = behind.next
+            ahead = ahead.next
+
+        behind.next = behind.next.next
+
+        return dummy.next
+    
+"""
+Notes:
+
+    * What I Learned:
+
+    * What I can work on:
+"""
 
