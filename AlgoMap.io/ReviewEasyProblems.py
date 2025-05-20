@@ -3,11 +3,10 @@ from pathlib import Path
 import random
 
 """
-This Python Script contains a database of links for all completed LeetCode Questions so far on 
-the AlgoMap.io List.
+This Python Script scrapes all completed 'Easy' problems in random order. 
 
-The purpose of this script is to be run everyday in order to practice random problems that I have
-already completed for the sake of revision.
+The purpose of this script is to be run everyday in order to quickly review easy problems that I have
+already completed for the sake of quick revision.
 """
 
 # Python Dictionary of All Completed Problems:
@@ -15,7 +14,7 @@ LinkDict = {}
 
 # Iterate through all Files in the current directory:
 base_dir = Path(__file__).parent
-current_files = [Path(__file__).resolve(), 'AlgoMap.io/ReviewEasyProblems.py']
+current_files = [Path(__file__).resolve(), 'AlgoMap.io/PracticeRandomProblem.py']
 
 # Recursively go through all files under that directory
 for file in base_dir.rglob('*.py'):

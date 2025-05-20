@@ -4,7 +4,7 @@ Medium
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 
 Time for first solution: 12:44
-Time to compile all solutions and notes: 
+Time to compile all solutions and notes: 31:34
 """
 
 """
