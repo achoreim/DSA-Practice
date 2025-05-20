@@ -22,7 +22,7 @@ for file in base_dir.rglob('*.py'):
         try:
             with file.open('r', encoding='utf-8') as f:
                 lines = f.readlines()
-                if len(lines) >= 4:
+                if len(lines) >= 4 and lines[1].strip().lower() == "easy":
                     LinkDict[file.name] = lines[3].strip()
         except Exception as e:
             print(f"{file.name} → Error reading file: {e}")
@@ -30,15 +30,21 @@ for file in base_dir.rglob('*.py'):
 
 
 while True:
-    user_input = input("Press 'Enter' for Random Problem, or 'q' to quit: ")
+    user_input = input("Press 'Enter' for Random  Easy Problem, or 'q' to quit: ")
     if user_input.lower() == 'q':
         print("Quitting!")
         exit()
     else:
-        key = random.choice(list(LinkDict.keys()))
-        url = LinkDict[key]
-        print("Solving Problem: ", key)
-        webbrowser.open(url)
+        if LinkDict:
+            print()
+            print("Total Problems left to solve: ", len(LinkDict))
+            key = random.choice(list(LinkDict.keys()))
+            url = LinkDict[key]
+            print("Solving Problem: ", key)
+            webbrowser.open(url)
+            del LinkDict[key]
+        else:
+            print("Finished All Easy Problems \n -- QUITTING --")
 
 
 
